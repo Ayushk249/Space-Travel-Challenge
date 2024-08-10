@@ -9,10 +9,20 @@
     height: 100vh;
 }
 
+.destination{
+    background: url("/src/assets/destination/background-destination-mobile.jpg") no-repeat center/cover;
+    height: 100vh;
+}
+
 
 @media (min-width: 768px) {
     .home{
         background: url("/src/assets/home/background-home-tablet.jpg") no-repeat center/cover;
+        height: 100vh;
+    }
+
+    .destination{
+        background: url("/src/assets/destination/background-destination-tablet.jpg") no-repeat center/cover;
         height: 100vh;
     }
 }
@@ -20,6 +30,11 @@
 @media (min-width: 1024px) {
     .home{
         background: url("/src/assets/home/background-home-desktop.jpg") no-repeat center/cover;
+        height: 100vh;
+    }
+
+    .destination{
+        background: url("/src/assets/destination/background-destination-desktop.jpg") no-repeat center/cover;
         height: 100vh;
     }
 }

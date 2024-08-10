@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 import { createBrowserRouter,createRoutesFromElements,RouterProvider, Route } from 'react-router-dom';
 import Homepage from './screens/Homepage';
+import Destination from './screens/Destination';
 
 
 
@@ -12,6 +13,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>} >
         <Route index={true} path='/' element={<Homepage/>}/>
+        <Route path='/destination' element={<Destination/>}></Route>
     </Route>
   )
 );
