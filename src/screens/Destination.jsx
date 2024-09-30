@@ -49,38 +49,41 @@ const Destination = () => {
     const {name, images, description, distance, travel} = destinations[planetIndex]
   return (
     <>
-        <section className=' text-white destination grid grid-cols-1 place-items-center lg:grid-cols-2 '>
+        <section className=' text-white destination grid grid-cols-1 place-items-center lg:grid-cols-2'>
+          <div className='mt-28'>
             <div className=''>
-                <h2 className='mt-7 font-Barlow sub-heading text-center font-medium text-transform: uppercase text-xl [word-spacing:0.30rem]'>
+                <h2 className='mt-11 font-Barlow sub-heading text-center font-medium text-transform: uppercase text-lg [word-spacing:0.4rem] md:text-left md:text-2xl md:ml-10' style={{letterSpacing: "0.2rem"}}>
                 <span className='text-gray-500 font-semibold mr-5'>01</span>
                 Pick Your Destination</h2>
-                <img className='w-52 m-auto mt-7 md:w-3/5 lg:w-full ' src= {images.png} alt={images.name} />
+
+                <img className='w-4/6 m-auto mt-14 md:w-3/5 lg:w-full ' src= {images.png} alt={images.name} />
             </div>
 
-            <div className='mt-3 grid grid-cols-1 place-items-center'>
-                <div className=' Toggle flex gap-6'>
-                    <button className='bt hover:border-b-2 '  onClick={() => setPlanetIndex(0)}> <h1 className='text-gray-400 font-medium font-Barlow text-transform: uppercase text-md'>Moon</h1></button>
-                    <button className='bt hover:border-b-2' onClick={() => setPlanetIndex(1)}> <h1 className='text-gray-400 font-medium font-Barlow text-transform: uppercase text-md'>Mars</h1></button>
-                    <button className='bt hover:border-b-2' onClick={() => setPlanetIndex(2)}> <h1 className='text-gray-400 font-medium font-Barlow text-transform: uppercase text-md'>Europa</h1></button>
-                    <button className='bt hover:border-b-2' onClick={() => setPlanetIndex(3)}> <h1 className='text-gray-400 font-medium font-Barlow text-transform: uppercase text-md'>Titan</h1></button>
+            <div className='mt-16 grid grid-cols-1 place-items-center'>
+                <div className=' Toggle flex gap-6 transition-all duration-200'>
+                    <button className='bt hover:border-b-2 '  onClick={() => setPlanetIndex(0)}> <h1 className='text-gray-300 font-medium font-Barlow text-transform: uppercase text-md'>Moon</h1></button>
+                    <button className='bt hover:border-b-2' onClick={() => setPlanetIndex(1)}> <h1 className='text-gray-300 font-medium font-Barlow text-transform: uppercase text-md'>Mars</h1></button>
+                    <button className='bt hover:border-b-2' onClick={() => setPlanetIndex(2)}> <h1 className='text-gray-300 font-medium font-Barlow text-transform: uppercase text-md'>Europa</h1></button>
+                    <button className='bt hover:border-b-2' onClick={() => setPlanetIndex(3)}> <h1 className='text-gray-300 font-medium font-Barlow text-transform: uppercase text-md'>Titan</h1></button>
                 </div>
 
                 <div>
-                    <h1 className='font-Bellefair main text-center text-transform: uppercase text-5xl mt-6 '>{name}</h1>
+                    <h1 className='font-Bellefair main text-center text-transform: uppercase text-5xl mt-10 '>{name}</h1>
                     <p className='text-gray-400 font-Barlow m-5 p-6 text-center border-b-2 border-gray-400'>{description}</p>
                 </div>
 
-                <div className='grid grid-cols-1 gap-5 place-items-center md:grid-cols-2 md:gap-52 lg:gap-40'>
+                <div className='grid grid-cols-1 gap-2 place-items-center md:grid-cols-2 md:gap-52 lg:gap-40'>
                     <div>
                         <h2 className='text-gray-400 font-Barlow sub-heading text-center text-transform: uppercase text-md [word-spacing:0.20rem]'>Avg. Distance</h2>
                         <p className='mt-2 text-white font-Bellefair text-transform: uppercase text-center text-3xl'>{distance}</p>
                     </div>
 
-                    <div>
+                    <div className='m-5'>
                         <h2 className=' text-gray-400 font-Barlow sub-heading text-center text-transform: uppercase text-md [word-spacing:0.20rem]'>est. travel time</h2>
-                        <p className='mt-2 text-white font-Bellefair text-transform: uppercase text-center text-3xl'>{travel}</p>
+                        <p className='mt-2 mb-4 text-white font-Bellefair text-transform: uppercase text-center text-3xl'>{travel}</p>
                     </div>
                 </div>
+              </div>
             </div>
         </section>
     </>
